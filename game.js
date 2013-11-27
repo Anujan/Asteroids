@@ -74,6 +74,8 @@
     var ship = this.ship;
     this.asteroids.forEach(function (ast) {
       if (ast.isCollidedWith(ship)) {
+        console.log(ast,ship);
+
         collided = true;
       }
     });

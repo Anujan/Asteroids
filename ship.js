@@ -4,11 +4,13 @@
     args.push(Ship.RADIUS);
     args.push(Ship.COLOR);
     Asteroids.MovingObject.apply(this, args);
+    this.img = new Image(70, 70);
+    this.img.src = 'ship.png';
   }
 
   Ship.inherits(Asteroids.MovingObject);
 
-  Ship.RADIUS = 10;
+  Ship.RADIUS = 45;
   Ship.COLOR = '#AAAA00';
 
   Ship.prototype.power = function(x, y) {
