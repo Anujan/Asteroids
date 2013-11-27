@@ -5,6 +5,7 @@
     this.ship = new Asteroids.Ship(Game.DIM_X / 2, Game.DIM_Y / 2, 0, 0);
     this.timer = null;
     this.bullets = [];
+    this.points = 0;
   }
 
   Game.DIM_X = 1000;
@@ -106,6 +107,7 @@
   Game.prototype.removeAsteroid = function (asteroid) {
     var index = this.asteroids.indexOf(asteroid);
     this.asteroids.splice(index, 1);
+    this.points += 100;
   }
 
   Game.prototype.bindKeyHandlers = function () {
