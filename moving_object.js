@@ -30,21 +30,25 @@ var Asteroids = Asteroids || {};
   }
 
   MovingObject.prototype.draw = function(ctx) {
-    ctx.strokeStyle = this.color;
-    ctx.fillStyle = this.color;
-    ctx.beginPath();
-    ctx.arc(
-      this.posX,
-      this.posY,
-      this.radius,
-      0,
-      2 * Math.PI,
-      false
-    );
+    if (this.img) {
+      ctx.drawImage(this.img, this.posX, this.posY);
+    } else {
+      ctx.strokeStyle = this.color;
+      ctx.fillStyle = this.color;
+      ctx.beginPath();
+      ctx.arc(
+        this.posX,
+        this.posY,
+        this.radius,
+        0,
+        2 * Math.PI,
+        false
+      );
 
-    ctx.fill();
-    ctx.stroke();
-    ctx.closePath();
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    }
   };
 
   MovingObject.prototype.isCollidedWith = function(other) {
