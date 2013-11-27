@@ -12,7 +12,7 @@
   Game.DIM_Y = 700;
 
   Game.prototype.addAsteroids = function() {
-    var numAsteroids = 15;
+    var numAsteroids = 20;
     var asteroids = [];
     for (var i = 0; i < numAsteroids; i++) {
       asteroids.push(Asteroids.Asteroid.randomAsteroid(Game.DIM_X, Game.DIM_Y));
@@ -23,7 +23,7 @@
   Game.prototype.draw = function() {
     this.ctx.clearRect(0, 0, Game.DIM_X, Game.DIM_Y);
 
-    this.ctx.fillStyle = '#000000';
+    this.ctx.fillStyle = '#000';
     this.ctx.fillRect(0, 0, Game.DIM_X, Game.DIM_Y);
 
     var self = this;

@@ -4,12 +4,12 @@
     args.push(Asteroid.RADIUS);
     args.push(Asteroid.COLOR);
     Asteroids.MovingObject.apply(this, args);
-    this.img = new Image(40, 40);
-    this.img.src = 'asteroid.gif';
+    this.img = new Image(60, 60);
+    this.img.src = 'asteroid.png';
   }
 
   Asteroid.COLOR = '#FFFFFF';
-  Asteroid.RADIUS = 40;
+  Asteroid.RADIUS = 60;
 
   Asteroids.Asteroid = Asteroid;
 
