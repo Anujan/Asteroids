@@ -8,8 +8,8 @@
     this.points = 0;
   }
 
-  Game.DIM_X = 1000;
-  Game.DIM_Y = 700;
+  Game.DIM_X = 500;
+  Game.DIM_Y = 500;
 
   Game.prototype.addAsteroids = function() {
     var numAsteroids = 15;
